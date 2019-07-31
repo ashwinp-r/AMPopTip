@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		16CD95BA22CB98C9DADD5DE1 /* Pods_AMPopTip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A02344EA4D44DF281BECCCC /* Pods_AMPopTip.framework */; };
 		653C202D1EC351010007D179 /* AMPopTip.h in Headers */ = {isa = PBXBuildFile; fileRef = 653C202B1EC351010007D179 /* AMPopTip.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		653C20371EC351330007D179 /* PopTip+Draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653C20341EC351330007D179 /* PopTip+Draw.swift */; };
 		653C20381EC351330007D179 /* PopTip+Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653C20351EC351330007D179 /* PopTip+Transitions.swift */; };
@@ -15,9 +14,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		324E868EDDB657E7FDF961F4 /* Pods-AMPopTip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AMPopTip.debug.xcconfig"; path = "Target Support Files/Pods-AMPopTip/Pods-AMPopTip.debug.xcconfig"; sourceTree = "<group>"; };
-		3A02344EA4D44DF281BECCCC /* Pods_AMPopTip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AMPopTip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		456FCC767A4F919BA06057CD /* Pods-AMPopTip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AMPopTip.release.xcconfig"; path = "Target Support Files/Pods-AMPopTip/Pods-AMPopTip.release.xcconfig"; sourceTree = "<group>"; };
 		653C20281EC351010007D179 /* AMPopTip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AMPopTip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		653C202B1EC351010007D179 /* AMPopTip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMPopTip.h; sourceTree = "<group>"; };
 		653C202C1EC351010007D179 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -31,30 +27,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16CD95BA22CB98C9DADD5DE1 /* Pods_AMPopTip.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		29F8BFFC3AF60DF733095645 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				324E868EDDB657E7FDF961F4 /* Pods-AMPopTip.debug.xcconfig */,
-				456FCC767A4F919BA06057CD /* Pods-AMPopTip.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		653C201E1EC351010007D179 = {
 			isa = PBXGroup;
 			children = (
 				653C202A1EC351010007D179 /* AMPopTip */,
 				653C20291EC351010007D179 /* Products */,
-				29F8BFFC3AF60DF733095645 /* Pods */,
-				7D22C4AB8FC3BD915AE9220B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,14 +69,6 @@
 			path = Source;
 			sourceTree = SOURCE_ROOT;
 		};
-		7D22C4AB8FC3BD915AE9220B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3A02344EA4D44DF281BECCCC /* Pods_AMPopTip.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -112,7 +87,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 653C20301EC351010007D179 /* Build configuration list for PBXNativeTarget "AMPopTip" */;
 			buildPhases = (
-				C0477B021F20C4CB27F84AC8 /* [CP] Check Pods Manifest.lock */,
 				653C20231EC351010007D179 /* Sources */,
 				653C20241EC351010007D179 /* Frameworks */,
 				653C20251EC351010007D179 /* Headers */,
@@ -170,31 +144,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		C0477B021F20C4CB27F84AC8 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AMPopTip-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		653C20231EC351010007D179 /* Sources */ = {
@@ -331,7 +280,6 @@
 		};
 		653C20311EC351010007D179 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 324E868EDDB657E7FDF961F4 /* Pods-AMPopTip.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -353,7 +301,6 @@
 		};
 		653C20321EC351010007D179 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 456FCC767A4F919BA06057CD /* Pods-AMPopTip.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
